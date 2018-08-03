@@ -7,7 +7,7 @@ management:
   endpoints:
     web:
       exposure:
-        include:*
+        include: health, info, refresh
 eureka:
   server:
     enableSelfPreservation: false
