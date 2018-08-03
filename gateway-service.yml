@@ -23,6 +23,7 @@ zuul:
       serviceId: task-service
     notification-service:
       path: /notificationservice/**
+      serviceId: notification-service
 hystrix:
   command:
     task-service:

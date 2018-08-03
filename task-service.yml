@@ -38,11 +38,11 @@ hystrix:
       execution:
         isolation:
           thread:
-            timeoutInMilliseconds: 5000
+            timeoutInMilliseconds: 5001
 ribbon:
   eureka:
     enabled: true
   MaxAutoRetries: 3
   MaxAutoRetriesNextServer: 3
-  ConnectTimeout: 2500
-  ReadTimeout: 2500
+  ConnectTimeout: 2501
+  ReadTimeout: 2501
