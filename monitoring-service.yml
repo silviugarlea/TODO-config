@@ -1,0 +1,22 @@
+server:
+  port: 8998
+management:
+  endpoints:
+    web:
+      exposure:
+        include: *
+spring:
+  application:
+    name: monitoring-service
+turbine:
+  aggregator:
+    clusterConfig: TASK-SERVICE
+  appConfig: task-service
+  instanceUrlSuffix: /hystrix.stream
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
+    healthcheck:
+      enabled: true
+    registryFetchIntervalSeconds: 5

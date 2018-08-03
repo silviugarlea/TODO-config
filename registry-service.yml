@@ -1,0 +1,18 @@
+server:
+  port: 8761
+management:
+  endpoints:
+    web:
+      exposure:
+        include: *
+spring:
+  application:
+    name: registry-service
+eureka:
+  server:
+    enableSelfPreservation: false
+    evictionIntervalTimerInMs: 5000
+    responseCacheUpdateIntervalMs: 5000
+  client:
+    registerWithEureka: false
+    fetchRegistry: false

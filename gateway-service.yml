@@ -1,0 +1,36 @@
+server:
+  port: 8080
+management:
+  endpoints:
+    web:
+      exposure:
+        include: *
+spring:
+  application:
+    name: gateway-service
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
+    region: default
+    healthcheck:
+      enabled: true
+    registryFetchIntervalSeconds: 5
+zuul:
+  routes:
+    task-service:
+      path: /task-service/**
+    notification-service:
+      path: /notification-service/**
+hystrix:
+  command:
+    task-service:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 5000
+    registry-service:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 5000
