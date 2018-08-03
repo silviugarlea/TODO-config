@@ -19,9 +19,9 @@ eureka:
 zuul:
   routes:
     task-service:
-      path: /task-service/**
+      path: /taskservice/**
     notification-service:
-      path: /notification-service/**
+      path: /notificationservice/**
 hystrix:
   command:
     task-service:
