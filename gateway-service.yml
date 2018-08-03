@@ -21,3 +21,15 @@ zuul:
     task-service:
       path: /taskservice/**
       serviceId: task-service
+    notification-service:
+      path: /notificationservice/**
+hystrix:
+  command:
+    task-service:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 5000
+ribbon:
+  ConnectTimeout: 10000
+  ReadTimeout: 10000
