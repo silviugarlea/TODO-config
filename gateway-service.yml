@@ -21,5 +21,3 @@ zuul:
     task-service:
       path: /taskservice/**
       serviceId: task-service
-    notification-service:
-      path: /notificationservice/**
